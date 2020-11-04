@@ -66,7 +66,7 @@ jobs:
     pool:
       vmImage: "windows-2019"
     steps:
-      - script: |
+      - powershell: |
           (New-Object Net.WebClient).DownloadFile("https://github.com/msys2/msys2-installer/releases/download/2020-09-03/msys2-base-x86_64-20200903.sfx.exe", "sfx.exe")
           .\sfx.exe -y -o\
           del sfx.exe
@@ -105,7 +105,7 @@ jobs:
     pool:
       vmImage: "windows-2019"
     steps:
-      - script: |
+      - powershell: |
           (New-Object Net.WebClient).DownloadFile("https://github.com/msys2/msys2-installer/releases/download/2020-09-03/msys2-base-x86_64-20200903.sfx.exe", "sfx.exe")
           .\sfx.exe -y -o\
           del sfx.exe
